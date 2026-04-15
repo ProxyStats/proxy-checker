@@ -1,0 +1,46 @@
+name: Update Proxy Lists
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC daily
+  workflow_dispatch:        # allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install "async-proxy-checker[socks]"
+
+      - name: Fetch and validate HTTP proxies
+        run: |
+          proxy-checker fetch --type http --count 200 --output proxies/http.txt --format txt
+        continue-on-error: true
+
+      - name: Fetch and validate SOCKS4 proxies
+        run: |
+          proxy-checker fetch --type socks4 --count 100 --output proxies/socks4.txt --format txt
+        continue-on-error: true
+
+      - name: Fetch and validate SOCKS5 proxies
+        run: |
+          proxy-checker fetch --type socks5 --count 100 --output proxies/socks5.txt --format txt
+        continue-on-error: true
+
+      - name: Commit updated lists
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add proxies/
+          git diff --staged --quiet || git commit -m "chore: update proxy lists [$(date -u '+%Y-%m-%d')]"
+          git push
