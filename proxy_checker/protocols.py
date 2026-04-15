@@ -92,11 +92,11 @@ async def check_socks_proxy(
 ) -> ProxyResult:
     """Check SOCKS4/SOCKS5 proxy using aiohttp-socks."""
     try:
-        from aiohttp_socks import ProxyConnector, ProxyType as SocksProxyType
+        from aiohttp_socks import ProxyConnector
     except ImportError:
         return ProxyResult(
             host=host, port=port, proxy_type=proxy_type, is_alive=False,
-            error="aiohttp-socks not installed: pip install async-proxy-checker[socks]"
+            error="aiohttp-socks not installed: pip install fast-proxy-checker[socks]"
         )
 
     proxy_url = f"{proxy_type.value}://{host}:{port}"
@@ -123,7 +123,8 @@ async def check_socks_proxy(
                     else:
                         anonymity = AnonymityLevel.ELITE
 
-                country, country_code = await _get_geo(session, proxy_ip)
+                async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as direct:
+                    country, country_code = await _get_geo(direct, proxy_ip)
 
                 return ProxyResult(
                     host=host,

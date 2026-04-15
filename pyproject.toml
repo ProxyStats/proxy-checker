@@ -41,3 +41,6 @@ proxy-checker = "proxy_checker.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["proxy_checker"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
