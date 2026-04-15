@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "async-proxy-checker"
+name = "fast-proxy-checker"
 version = "1.0.0"
 description = "Fast async proxy checker — HTTP/HTTPS/SOCKS4/SOCKS5, 500+ proxies/minute"
 readme = "README.md"

@@ -1,8 +1,8 @@
 # proxy-checker
 
-[![PyPI version](https://img.shields.io/pypi/v/async-proxy-checker.svg)](https://pypi.org/project/async-proxy-checker/)
-[![Downloads](https://img.shields.io/pypi/dm/async-proxy-checker.svg)](https://pypi.org/project/async-proxy-checker/)
-[![Python](https://img.shields.io/pypi/pyversions/async-proxy-checker.svg)](https://pypi.org/project/async-proxy-checker/)
+[![PyPI version](https://img.shields.io/pypi/v/fast-proxy-checker.svg)](https://pypi.org/project/fast-proxy-checker/)
+[![Downloads](https://img.shields.io/pypi/dm/fast-proxy-checker.svg)](https://pypi.org/project/fast-proxy-checker/)
+[![Python](https://img.shields.io/pypi/pyversions/fast-proxy-checker.svg)](https://pypi.org/project/fast-proxy-checker/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/proxystats/proxy-checker?style=social)](https://github.com/proxystats/proxy-checker)
 
@@ -17,8 +17,8 @@ If this tool saved you time, give it a ⭐ — it helps others find it.
 ## Installation
 
 ```bash
-pip install async-proxy-checker          # HTTP/HTTPS support
-pip install "async-proxy-checker[socks]" # + SOCKS4/SOCKS5 support
+pip install fast-proxy-checker          # HTTP/HTTPS support
+pip install "fast-proxy-checker[socks]" # + SOCKS4/SOCKS5 support
 ```
 
 ## Quick Start
