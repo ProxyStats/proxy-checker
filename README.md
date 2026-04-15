@@ -1,16 +1,14 @@
 # proxy-checker
 
-[![PyPI version](https://img.shields.io/pypi/v/fast-proxy-checker.svg)](https://pypi.org/project/fast-proxy-checker/)
-[![Downloads](https://img.shields.io/pypi/dm/fast-proxy-checker.svg)](https://pypi.org/project/fast-proxy-checker/)
-[![Python](https://img.shields.io/pypi/pyversions/fast-proxy-checker.svg)](https://pypi.org/project/fast-proxy-checker/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/proxystats/proxy-checker?style=social)](https://github.com/proxystats/proxy-checker)
+[![PyPI](https://img.shields.io/pypi/v/fast-proxy-checker)](https://pypi.org/project/fast-proxy-checker/)
+[![Downloads](https://img.shields.io/pypi/dm/fast-proxy-checker)](https://pypi.org/project/fast-proxy-checker/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Python](https://img.shields.io/pypi/pyversions/fast-proxy-checker)](https://pypi.org/project/fast-proxy-checker/)
+[![Stars](https://img.shields.io/github/stars/ProxyStats/proxy-checker?style=social)](https://github.com/ProxyStats/proxy-checker)
 
 **Fast async proxy validator** — HTTP/HTTPS/SOCKS4/SOCKS5, 500+ proxies/minute.
 
 Checks latency, anonymity level, and country. Works as a library or CLI tool.
-
-If this tool saved you time, give it a ⭐ — it helps others find it.
 
 ---
 
@@ -65,6 +63,25 @@ asyncio.run(main())
 - **Free proxy lists** — auto-updated daily (see [`proxies/`](proxies/))
 - **CLI + library** — use from terminal or import in your code
 
+---
+
+> 💡 **Need reliable proxies?** Free lists work for testing, but production scraping needs stable providers.
+> Check [**ProxyStats.io**](https://proxystats.io) — independent benchmarks of residential & datacenter proxy providers with real-world latency, success rate, and cost data.
+
+---
+
+## Free Proxy Lists (updated daily)
+
+Auto-validated by this tool via GitHub Actions — only working proxies included:
+
+| List | Type | Raw URL |
+|------|------|---------|
+| [proxies/http.txt](proxies/http.txt) | HTTP | `raw.githubusercontent.com/ProxyStats/proxy-checker/main/proxies/http.txt` |
+| [proxies/socks4.txt](proxies/socks4.txt) | SOCKS4 | `raw.githubusercontent.com/ProxyStats/proxy-checker/main/proxies/socks4.txt` |
+| [proxies/socks5.txt](proxies/socks5.txt) | SOCKS5 | `raw.githubusercontent.com/ProxyStats/proxy-checker/main/proxies/socks5.txt` |
+
+Free proxies are unstable by nature — IPs die within hours. For production workloads see [ProxyStats.io](https://proxystats.io).
+
 ## Output Example
 
 ```
@@ -109,28 +126,6 @@ socks5://10.0.0.1:1080
 http://user:pass@1.2.3.4:3128
 ```
 
-## Free Proxy Lists
-
-Auto-updated daily via GitHub Actions:
-
-| List | Type |
-|------|------|
-| [proxies/http.txt](proxies/http.txt) | HTTP |
-| [proxies/socks4.txt](proxies/socks4.txt) | SOCKS4 |
-| [proxies/socks5.txt](proxies/socks5.txt) | SOCKS5 |
-
-> **Need reliable proxies for production?**
-> [ProxyStats.io](https://proxystats.io) — independent benchmarks of 50+ residential and datacenter
-> proxy providers. Compare speed, uptime, and pricing without vendor bias.
-
-## Reliable Proxies
-
-Free proxy lists are unstable — IPs die within hours. For production scraping, data collection, or any serious use, you need a real provider.
-
-**[ProxyStats.io](https://proxystats.io)** tests and ranks 50+ residential, datacenter, and mobile proxy providers on real-world metrics: speed, uptime, geo-coverage, and price. No sponsored rankings, no vendor bias.
-
-→ [Compare proxy providers](https://proxystats.io/proxy-providers)
-
 ## Python API Reference
 
 ```python
@@ -153,10 +148,10 @@ async for result in check_proxies(
 
 ## Contributing
 
-PRs welcome. Please add tests for new features.
+See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome.
 
 ```bash
-git clone https://github.com/proxystats/proxy-checker
+git clone https://github.com/ProxyStats/proxy-checker
 cd proxy-checker
 pip install -e ".[socks]"
 pytest tests/
@@ -168,4 +163,10 @@ MIT — see [LICENSE](LICENSE)
 
 ---
 
-*Built by [ProxyStats.io](https://proxystats.io) — proxy provider benchmarks and comparisons.*
+<p align="center">
+  <b>⭐ Star this repo if it helped you</b> — it helps others discover it.
+</p>
+
+<p align="center">
+  Made by <a href="https://proxystats.io">ProxyStats</a> — independent proxy benchmarks.
+</p>

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fast-proxy-checker"
-version = "1.0.1"
+version = "1.0.2"
 description = "Fast async proxy checker — HTTP/HTTPS/SOCKS4/SOCKS5, 500+ proxies/minute"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -32,9 +32,10 @@ socks = ["aiohttp-socks>=0.8"]
 all = ["aiohttp-socks>=0.8"]
 
 [project.urls]
-Homepage = "https://github.com/proxystats/proxy-checker"
-Documentation = "https://proxystats.io/proxy-checker"
-"Bug Tracker" = "https://github.com/proxystats/proxy-checker/issues"
+Homepage = "https://github.com/ProxyStats/proxy-checker"
+Website = "https://proxystats.io"
+Repository = "https://github.com/ProxyStats/proxy-checker"
+Issues = "https://github.com/ProxyStats/proxy-checker/issues"
 
 [project.scripts]
 proxy-checker = "proxy_checker.cli:main"

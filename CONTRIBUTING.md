@@ -1,26 +1,27 @@
-# Contributing to proxy-checker
+# Contributing
 
-Bug reports, feature requests, and PRs are welcome.
+Thanks for considering a contribution!
 
-## Getting started
+## Quick start
 
-```bash
-git clone https://github.com/proxystats/proxy-checker
-cd proxy-checker
-pip install -e ".[socks]"
-pytest tests/
-```
+1. Fork the repo
+2. `pip install -e ".[socks]"`
+3. Make your changes
+4. `pytest tests/`
+5. Open a PR
 
-## Guidelines
+## What we love
 
-- Add tests for new features or bug fixes
-- Keep PRs focused — one change per PR
-- Run `pytest tests/` before submitting
+- Performance improvements (benchmarks welcome)
+- New proxy sources for daily auto-update
+- Protocol support (HTTP/2, HTTP/3)
+- Bug fixes with a failing test included
 
-## Reporting bugs
+## What to skip
 
-Open an issue with:
-- Python version
-- OS
-- Command you ran
-- Expected vs actual output
+- Major API breaking changes without discussion
+- Vendor-specific integrations (keep it generic)
+
+## Code style
+
+`ruff format .` before committing.
