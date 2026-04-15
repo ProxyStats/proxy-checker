@@ -10,6 +10,8 @@
 
 Checks latency, anonymity level, and country. Works as a library or CLI tool.
 
+If this tool saved you time, give it a ⭐ — it helps others find it.
+
 ---
 
 ## Installation
@@ -120,6 +122,14 @@ Auto-updated daily via GitHub Actions:
 > **Need reliable proxies for production?**
 > [ProxyStats.io](https://proxystats.io) — independent benchmarks of 50+ residential and datacenter
 > proxy providers. Compare speed, uptime, and pricing without vendor bias.
+
+## Reliable Proxies
+
+Free proxy lists are unstable — IPs die within hours. For production scraping, data collection, or any serious use, you need a real provider.
+
+**[ProxyStats.io](https://proxystats.io)** tests and ranks 50+ residential, datacenter, and mobile proxy providers on real-world metrics: speed, uptime, geo-coverage, and price. No sponsored rankings, no vendor bias.
+
+→ [Compare proxy providers](https://proxystats.io/proxy-providers)
 
 ## Python API Reference
 
