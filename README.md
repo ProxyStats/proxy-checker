@@ -8,6 +8,8 @@
 
 **Fast async proxy validator** — HTTP/HTTPS/SOCKS4/SOCKS5, 500+ proxies/minute.
 
+![demo](demo.gif)
+
 Checks latency, anonymity level, and country. Works as a library or CLI tool.
 
 ---
